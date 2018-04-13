@@ -37,7 +37,7 @@ import axios from 'axios';
         })
         return(
             <div>
-                <Link to = '/wizard'><button>Add New Property</button></Link>
+                <Link to = '/wizard/step1'><button>Add New Property</button></Link>
                 {mappedList}
             </div>
         )
