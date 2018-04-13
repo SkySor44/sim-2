@@ -9,6 +9,8 @@ import axios from 'axios';
         this.state = {
             houseList: []
         }
+
+        //REACT 
         this.componentDidMount = this.componentDidMount.bind(this);
         this.deleteHouse = this.deleteHouse.bind(this);
     }
@@ -28,6 +30,7 @@ import axios from 'axios';
     }
 
     render(){
+        //ES6 ARROW FUNCTIONS
         var mappedList = this.state.houseList.map((house, i) => {
             console.log(house)
             return(

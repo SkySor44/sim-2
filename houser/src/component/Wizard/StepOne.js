@@ -16,12 +16,14 @@ class StepOne extends Component{
     }
 
     componentDidMount(){
+        //ES6 DESTRUCTURING
+        const {name, address, city, state, zipcode} = this.props
         this.setState({
-            name: this.props.name,
-            address: this.props.address,
-            city: this.props.city,
-            state: this.props.state,
-            zipcode: this.props.zipcode
+            name: name,
+            address: address,
+            city: city,
+            state: state,
+            zipcode: zipcode
         })
     }
 
