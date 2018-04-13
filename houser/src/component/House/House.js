@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function House(props){
     return(
-        <div key = {props.myKey}>
-            <h4>Property Name: {props.name}</h4>
-            <img src = {`${props.image}`} alt = 'house'/>
+        <div key = {props.myKey} className= 'house-card'>
+            <img src = {props.image} alt = 'house'/>
+            <p>Property Name: {props.name}</p>
             <p>Address: {props.address}</p>
             <p>City: {props.city}</p>
             <p>State: {props.state}</p>

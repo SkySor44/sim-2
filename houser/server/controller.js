@@ -8,8 +8,8 @@ module.exports =  {
 
     newHouse: (req, res, next) => {
         const db = req.app.get('db');
-        const {name, address, city, state, zipcode, image, monthlymortgageamount, desiredrent} = req.body;
-        db.addHouse(name, address, city, state, zipcode, monthlymortgageamount, desiredrent).then(() => {
+        const {name, address, city, state, zipcode, image, mortgage, rent} = req.body;
+        db.addHouse(name, address, city, state, zipcode, image, mortgage, rent).then(() => {
             res.status(200).send()
         }).catch(() => res.status(500).send())
     },

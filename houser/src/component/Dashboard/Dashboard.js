@@ -29,15 +29,21 @@ import axios from 'axios';
 
     render(){
         var mappedList = this.state.houseList.map((house, i) => {
-           return(
-            <House myKey = {house.id} name = {house.name} address = {house.address} city = {house.city} state = {house.state} zipcode = {house.zipcode} deleteFn = {this.deleteHouse}/>
+            console.log(house)
+            return(
+            <House myKey = {house.id} name = {house.name} address = {house.address} city = {house.city} state = {house.state} zipcode = {house.zipcode} deleteFn = {this.deleteHouse} mortgage ={house.monthlymortgageamount} rent = {house.desiredrent}/>
            )
             
             
         })
         return(
-            <div>
-                <Link to = '/wizard/step1'><button>Add New Property</button></Link>
+            <div className = 'dash'>
+                <div className = 'dash-head'>
+                <h1>Dashboard</h1>
+                <Link to = '/wizard/step1'><button className = 'add-prop'>Add New Property</button></Link>
+                
+                </div>
+                <h4>Home Listings</h4>
                 {mappedList}
             </div>
         )

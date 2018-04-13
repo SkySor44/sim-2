@@ -1,28 +1,41 @@
 .App {
   text-align: center;
+  background: #AFD4C0
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.header {
+  display: flex;
+  justify-content: space-around;
+  background: #519872;
+  width: 100%;
+  height: 100px;
   color: white;
+  font-weight: 100;
+  align-items: center;
 }
 
-.App-title {
-  font-size: 1.5em;
+.dash {
+  width: 60%;
+  margin: 0px auto;
+  background: #E5F4EC;
 }
 
-.App-intro {
-  font-size: large;
+.dash-head {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.house-card {
+  background: #DEDEDE;
+  margin: 20px;
+}
+
+.add-prop {
+  background: #8AEA92;
+  font-weight: bolder;
+  font-size: 20px
 }

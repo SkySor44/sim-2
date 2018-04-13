@@ -60,12 +60,12 @@ class StepOne extends Component{
     render(){
         return(
             <div>
-                <input value = {this.state.name} type = 'text' placeholder = 'Enter Property Name' onChange = {(e) => this.updateName(e.target.value)}/>
-                <input value = {this.state.address} type = 'text' placeholder = 'Enter Address' onChange = {(e) => this.updateAddress(e.target.value)}/>
-                <input value = {this.state.city} type = 'text' placeholder = 'Enter City' onChange = {(e) => this.updateCity(e.target.value)}/>
-                <input value = {this.state.state} type = 'text' placeholder = 'Enter State' onChange = {(e) => this.updateState(e.target.value)}/>
-                <input value = {this.state.zipcode} type = 'number' placeholder = 'Enter Zip' onChange = {(e) => this.updateZipcode(e.target.value)}/>
-                <Link to = '/wizard/step2'><button onClick = {() => this.props.updateStepOne()}>Next Step</button></Link>
+                <input value = {this.state.name}  type = 'text' placeholder = 'Enter Property Name' onChange = {(e) => this.updateName(e.target.value)}/>
+                <input value = {this.state.address}  type = 'text' placeholder = 'Enter Address' onChange = {(e) => this.updateAddress(e.target.value)}/>
+                <input value = {this.state.city}  type = 'text' placeholder = 'Enter City' onChange = {(e) => this.updateCity(e.target.value)}/>
+                <input value = {this.state.state}  type = 'text' placeholder = 'Enter State' onChange = {(e) => this.updateState(e.target.value)}/>
+                <input value = {this.state.zipcode}  type = 'number' placeholder = 'Enter Zip' onChange = {(e) => this.updateZipcode(e.target.value)}/>
+                <Link to = '/wizard/step2'><button onClick = {() => this.props.updateStepOne(this.state.name, this.state.address, this.state.city, this.state.state, this.state.zipcode)}>Next Step</button></Link>
                 
             </div>
         )
@@ -74,7 +74,7 @@ class StepOne extends Component{
 
 function mapStateToProps(state){
     return {
-        propName: state.propName,
+        name: state.name,
         address: state.address,
         city: state.city,
         state: state.state,
